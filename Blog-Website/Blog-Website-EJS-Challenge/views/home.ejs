@@ -1,0 +1,11 @@
+<%-include("partials/header");-%>
+<h1>Home</h1>
+<p><%= para %></p>
+<% diaryEntry.forEach(function(element){ %>
+  <h1><%= element.diarytitle %></h1>
+  <p>
+    <%= element.diarycontent.substring(0,100) +"..." %>
+    <a href="/posts/<%= element.diarytitle %>">Read More</a>
+  </p>
+<% }); %>
+<%-include("partials/footer");-%>
